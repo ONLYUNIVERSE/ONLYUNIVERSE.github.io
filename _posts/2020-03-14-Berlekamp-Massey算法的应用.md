@@ -17,61 +17,61 @@ BM算法是用来求解一个数列的最短线性递推式的算法
 
 ### 一些定义
 
-- R~0~={}  &emsp;&emsp;&emsp;&emsp;&emsp;//初始递推式
+- R<sub>0</sub>={}  &emsp;&emsp;&emsp;&emsp;&emsp;//初始递推式
 
 - cnt &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;//递推式的修改次数
 
-- delta~i~=a~i~ - $\sum_{j=1}^m$ r~j~*a~i-j~&emsp;&emsp;&emsp;//递推式的正确性的判断，其中r~i~是递推式的元素，m是递推式中元素的个数
+- delta<sub>i</sub>=a<sub>i</sub> - $\sum_{j=1}^m$ r<sub>j</sub>*a<sub>i-j</sub>&emsp;&emsp;&emsp;//递推式的正确性的判断，其中r<sub>i</sub>是递推式的元素，m是递推式中元素的个数
 
-- fail~k~=i&emsp;&emsp;&emsp;&emsp;&emsp; //表示R第k次出错，在a~i~处出错
+- fail<sub>k</sub>=i&emsp;&emsp;&emsp;&emsp;&emsp; //表示R第k次出错，在a<sub>i</sub>处出错
 
-- mul=$delta~i~ \over delt~fail~cnt-1~~$
+- mul=$delta<sub>i</sub> \over delt<sub>fail</sub>cnt-1<sub></sub>$
 
-- R′={ &emsp;&emsp;(i-fail~cnt-1~-1个0)&emsp;&emsp;, &emsp;mul,&emsp;-mul·R~cnt-1~}
+- R′={ &emsp;&emsp;(i-fail<sub>cnt-1</sub>-1个0)&emsp;&emsp;, &emsp;mul,&emsp;-mul·R<sub>cnt-1</sub>}
 
-- R~cnt+1~=R~cnt~+R′&emsp;&emsp;//(按位相加)
+- R<sub>cnt+1</sub>=R<sub>cnt</sub>+R′&emsp;&emsp;//(按位相加)
 
 ### 计算步骤
 
-$$ 一、delta~i~=\begin{cases}
-delta~i~=0 & 不修改 \\
-delta~i~\neq0 & 计算fail~cnt~
+$$ 一、delta<sub>i</sub>=\begin{cases}
+delta<sub>i</sub>=0 & 不修改 \\
+delta<sub>i</sub>\neq0 & 计算fail<sub>cnt</sub>
 \end{cases}$$
 
-$$ 二、faila~i~=i\begin{cases}
-cnt=0 & R~cnt~=\{\overbrace{0,0,···,0}^{i个}\} \\
+$$ 二、faila<sub>i</sub>=i\begin{cases}
+cnt=0 & R<sub>cnt</sub>=\{\overbrace{0,0,···,0}^{i个}\} \\
 cnt\neq0 & 转三
 \end{cases}$$
 
 $$ 三、cnt\neq0 \begin{cases}
-mul={delta~i~ \over delt~fail~cnt-1~~\ } & \\
-R′=\{\overbrace{0,0,···,0}^{i-fail~cnt-1~个},mul,-mul·R~cnt-1~\}&\\
-R~cnt+1~=R~cnt~+R′(按位相加)
+mul={delta<sub>i</sub> \over delt<sub>fail</sub>cnt-1<sub></sub>\ } & \\
+R′=\{\overbrace{0,0,···,0}^{i-fail<sub>cnt-1</sub>个},mul,-mul·R<sub>cnt-1</sub>\}&\\
+R<sub>cnt+1</sub>=R<sub>cnt</sub>+R′(按位相加)
 \end{cases}$$
 
 ### 实例
 
 令待测序列S=10101111
 
-- R~0~={} cnt=0
+- R<sub>0</sub>={} cnt=0
 
-- a~1~=1 &emsp;delt~1~=1&emsp;&emsp;fail~0~=1&emsp;&emsp;R~1~={0} &emsp;cnt=1
+- a<sub>1</sub>=1 &emsp;delt<sub>1</sub>=1&emsp;&emsp;fail<sub>0</sub>=1&emsp;&emsp;R<sub>1</sub>={0} &emsp;cnt=1
 
-- a~2~=0 &emsp;delt~2~=0 &emsp;&emsp;不修改
+- a<sub>2</sub>=0 &emsp;delt<sub>2</sub>=0 &emsp;&emsp;不修改
 
-- a~3~=1 &emsp;delt~3~=1&emsp;&emsp;fail~1~=3&emsp;&emsp;mul=1&emsp; R′={0,1,0} &emsp;R~2~={0,1,0} &emsp;cnt=2
+- a<sub>3</sub>=1 &emsp;delt<sub>3</sub>=1&emsp;&emsp;fail<sub>1</sub>=3&emsp;&emsp;mul=1&emsp; R′={0,1,0} &emsp;R<sub>2</sub>={0,1,0} &emsp;cnt=2
 
-- a~4~=0 &emsp;delt~4~=0 &emsp;&emsp;不修改
+- a<sub>4</sub>=0 &emsp;delt<sub>4</sub>=0 &emsp;&emsp;不修改
 
-- a~5~=1 &emsp;delt~5~=0 &emsp;&emsp;不修改
+- a<sub>5</sub>=1 &emsp;delt<sub>5</sub>=0 &emsp;&emsp;不修改
 
-- a~6~=1 &emsp;delt~6~=1  &emsp;&emsp;fail~2~=6&emsp;&emsp;mul=1 &emsp;&emsp;R′={0,0,1,0}&emsp;R~3~={0,1,1,0}&emsp;&emsp;cnt=3
+- a<sub>6</sub>=1 &emsp;delt<sub>6</sub>=1  &emsp;&emsp;fail<sub>2</sub>=6&emsp;&emsp;mul=1 &emsp;&emsp;R′={0,0,1,0}&emsp;R<sub>3</sub>={0,1,1,0}&emsp;&emsp;cnt=3
 
-- a~7~=1 &emsp;delt~7~=0 &emsp;&emsp;不修改
+- a<sub>7</sub>=1 &emsp;delt<sub>7</sub>=0 &emsp;&emsp;不修改
 
-- a~8~=1 &emsp;delt~8~=-1 &emsp;fail2=8 &emsp;mul=-1 R′={0,-1,0,1,0}&emsp;R~4~={0,0,1,1,0}&emsp;&emsp;cnt=4
+- a<sub>8<sub>=1 &emsp;delt<sub>8</sub>=-1 &emsp;fail2=8 &emsp;mul=-1 R′={0,-1,0,1,0}&emsp;R<sub>4</sub>={0,0,1,1,0}&emsp;&emsp;cnt=4
 
->综上，由R~4~={0,0,1,1,0}&emsp;&emsp;cnt=4可知目前为止得到的特征多项式为
+>综上，由R<sub>4</sub>={0,0,1,1,0}&emsp;&emsp;cnt=4可知目前为止得到的特征多项式为
 
 1+0·x+0·x<sup>2</sup>+1·x<sup>3</sup>+1·x<sup>4</sup>+0·x<sup>5</sup>
 
