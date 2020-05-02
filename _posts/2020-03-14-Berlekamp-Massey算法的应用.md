@@ -69,7 +69,7 @@ R<sub>cnt+1</sub>=R<sub>cnt</sub>+R′(按位相加)
 
 - a<sub>7</sub>=1 &emsp;delt<sub>7</sub>=0 &emsp;&emsp;不修改
 
-- a<sub>8<sub>=1 &emsp;delt<sub>8</sub>=-1 &emsp;fail2=8 &emsp;mul=-1 R′={0,-1,0,1,0}&emsp;R<sub>4</sub>={0,0,1,1,0}&emsp;&emsp;cnt=4
+- a<sub>8</sub>=1 &emsp;delt<sub>8</sub>=-1 &emsp;fail2=8 &emsp;mul=-1 R′={0,-1,0,1,0}&emsp;R<sub>4</sub>={0,0,1,1,0}&emsp;&emsp;cnt=4
 
 >综上，由R<sub>4</sub>={0,0,1,1,0}&emsp;&emsp;cnt=4可知目前为止得到的特征多项式为
 
