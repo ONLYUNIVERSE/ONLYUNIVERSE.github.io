@@ -11,7 +11,7 @@ tags:                               #标签
     Cryptography
 ---
 
-### Berlekamp-Massey算法
+### Berlekamp-Massey算法.
 
 BM算法是用来求解一个数列的最短线性递推式的算法
 在本文中，BM算法具体被用于求解产生已知序列的线性移位寄存器的特征多项式及级数
