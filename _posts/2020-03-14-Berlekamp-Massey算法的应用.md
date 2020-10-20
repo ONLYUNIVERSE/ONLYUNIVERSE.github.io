@@ -77,7 +77,3 @@ R_{cnt+1}=R_{cnt}+R′(按位相加)
 1+0·x+0·x<sup>2</sup>+1·x<sup>3</sup>+1·x<sup>4</sup>+0·x<sup>5</sup>
 
 级数为4.
-
-$$ T(n) = \begin{cases} \Theta(1) & \text{if } n = 1, \\ T(n-1) + C(n-1) & \text{otherwise}. \end{cases} $$
-
-where $C(n)$ is the time to insert an element in a sorted array of $n$ elements.
