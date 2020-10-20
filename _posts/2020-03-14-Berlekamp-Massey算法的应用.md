@@ -11,7 +11,7 @@ tags:                               #标签
     Cryptography
 ---
 
-### Berlekamp-Massey算法.
+### Berlekamp-Massey算法
 
 BM算法是用来求解一个数列的最短线性递推式的算法
 在本文中，BM算法具体被用于求解产生已知序列的线性移位寄存器的特征多项式及级数
@@ -26,7 +26,7 @@ BM算法是用来求解一个数列的最短线性递推式的算法
 
 - fail<sub>k</sub>=i&emsp;&emsp;&emsp;&emsp;&emsp; //表示R第k次出错，在a<sub>i</sub>处出错
 
-- mul=$delta<sub>i</sub> \over delt<sub>fail</sub>cnt-1<sub></sub>$
+- mul=$$delta_i \over delt_{fail_{cnt-1}}$$
 
 - R′={ &emsp;&emsp;(i-fail<sub>cnt-1</sub>-1个0)&emsp;&emsp;, &emsp;mul,&emsp;-mul·R<sub>cnt-1</sub>}
 
@@ -34,20 +34,20 @@ BM算法是用来求解一个数列的最短线性递推式的算法
 
 ### 计算步骤
 
-$$ 一、delta<sub>i</sub>=\begin{cases}
-delta<sub>i</sub>=0 & 不修改 \\
-delta<sub>i</sub>\neq0 & 计算fail<sub>cnt</sub>
+$$ 一、delta_i = \begin{cases}
+delta_i=0 & 不修改 \\
+delta_i\neq0 & 计算fail_{cnt}
 \end{cases}$$
 
-$$ 二、faila<sub>i</sub>=i\begin{cases}
-cnt=0 & R<sub>cnt</sub>=\{\overbrace{0,0,···,0}^{i个}\} \\
+$$ 二、faila_i=i\begin{cases}
+cnt=0 & R_{cnt}=\{\overbrace{0,0,···,0}^{i个}\} \\
 cnt\neq0 & 转三
 \end{cases}$$
 
 $$ 三、cnt\neq0 \begin{cases}
-mul={delta<sub>i</sub> \over delt<sub>fail</sub>cnt-1<sub></sub>\ } & \\
-R′=\{\overbrace{0,0,···,0}^{i-fail<sub>cnt-1</sub>个},mul,-mul·R<sub>cnt-1</sub>\}&\\
-R<sub>cnt+1</sub>=R<sub>cnt</sub>+R′(按位相加)
+mul={delta_i \over delt_{fail_{cnt-1}}\ } & \\
+R′=\{\overbrace{0,0,···,0}^{i-fail_{cnt-1}个},mul,-mul·R_{cnt-1}\}&\\
+R_{cnt+1}=R_{cnt}+R′(按位相加)
 \end{cases}$$
 
 ### 实例
@@ -76,4 +76,4 @@ R<sub>cnt+1</sub>=R<sub>cnt</sub>+R′(按位相加)
 
 1+0·x+0·x<sup>2</sup>+1·x<sup>3</sup>+1·x<sup>4</sup>+0·x<sup>5</sup>
 
-级数为4
+级数为4.
