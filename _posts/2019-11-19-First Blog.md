@@ -15,3 +15,7 @@ tags:                               #标签
 
 >This is the First Blog  
 >>[Nothing is here](https://www.jianshu.com/p/ebe52d2d468f)[!](https://www.jianshu.com/p/e68fba58f75c)
+
+### 一些说明
+
+关于背景色的还原：将_sass/ _ custom /_ custom.scss中的内容删除即可
