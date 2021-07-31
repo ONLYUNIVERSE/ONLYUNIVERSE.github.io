@@ -1,0 +1,107 @@
+{
+  "main": {
+    "id": "47792e67b7d82900",
+    "type": "split",
+    "children": [
+      {
+        "id": "a02be0257fb5373d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "_posts/2021-04-12-高等数学.md",
+            "mode": "source"
+          }
+        },
+        "group": "1ade25e4fcc32e38"
+      },
+      {
+        "id": "5e021b163275b585",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "_posts/2021-04-12-高等数学.md",
+            "mode": "preview"
+          }
+        },
+        "group": "1ade25e4fcc32e38"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4a022a441fb8b44f",
+    "type": "split",
+    "children": [
+      {
+        "id": "db0de876f9940949",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "88c3cbddfa631a29",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2c176ef71074fc18",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8ff9753df529403a",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f9552d86e882067",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dbf077956d2ddea0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2021-04-12-高等数学.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "5e021b163275b585",
+  "lastOpenFiles": [
+    "_posts/2021-04-12-高等数学.md",
+    "_posts/2020-09-05-网络层.md"
+  ]
+}
